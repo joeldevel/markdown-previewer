@@ -5,9 +5,62 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background: #4a9;
+  background-image: url('./oriental-tiles.png');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0 20px;
+}
+
+.panel {
+  min-height: 50vh;
+}
+
+.editor {
+  padding: 10px;
+  min-height: 50vh;
+  width: 90%;
+  background: #fafafa;
+}
+
+.panel-title {
+  text-transform: capitalize;
+  color: #5f5;
+}
+
+.preview-panel {
+  padding: 10px;
+  min-height: 80%;
+  border: 1px solid #888;
+  border-radius: 6px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  background: #fafafa;
+}
+
+@media (min-width: 900px) {
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .panel {
+    min-height: 80vh;
+    width: 50%;
+  }
+
+  .editor {
+    min-height: 80%;
+    width: 90%;
+  }
+
 }
